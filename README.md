@@ -6,7 +6,7 @@ The collectionView library which is scaling, scrolling and stopping comfortably 
 
 |This|Instagram|Snapchat|
 |:-:|:-:|:-:|
-|<img src="demo.gif" width=200>|||
+|<img src="Images/demo.gif" width=200>|<img src="Images/instagram.gif" width=200>|<img src="Images/snapchat.gif" width=200>|
 
 ## Requirements
 Swift 4.2. Ready for use on iOS 11.0+
