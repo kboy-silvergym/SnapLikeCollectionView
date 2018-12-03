@@ -89,7 +89,7 @@ pod 'SnapLikeCollectionView'
 
 ## Author
 
-<img src ="images/kboy1.jpg" width=150>
+<img src ="https://pbs.twimg.com/profile_images/1068713176336785409/VoomclMb_bigger.jpg" width=150>
 
 **KBOY (Kei Fujikawa)**
 
