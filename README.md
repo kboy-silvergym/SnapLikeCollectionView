@@ -67,18 +67,25 @@ import SnapLikeCollectionView
 class ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    // set your original Cell to <SampleCell>
     private var dataSource: SnapLikeDataSource<SampleCell>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // setup size of cells
         let cellSize = SnapLikeCellSize(normal: 100, center: 160)
+        
+        // create dataSource
         dataSource = SnapLikeDataSource<SampleCell>(collectionView: collectionView, cellSize: cellSize)
         dataSource?.delegate = self
         
+        // create FlowLayout
         let layout = SnapLikeCollectionViewFlowLayout(cellSize: cellSize)
         collectionView.collectionViewLayout = layout
         
+        // setup collectionView like this
         collectionView.registerNib(SampleCell.self)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.decelerationRate = .fast
@@ -86,10 +93,12 @@ class ViewController: UIViewController {
         collectionView.delegate = dataSource
         collectionView.dataSource = dataSource
         
+        // pass arrays which type is decided `Item` in the SampleCell.
         dataSource?.items = ["A", "B", "C", "D", "E"]
     }
 }
 
+// listen selected listener
 extension ViewController: SnapLikeDataDelegate {
     func cellSelected(_ index: Int) {
         DispatchQueue.main.async { [weak self] in
