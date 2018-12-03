@@ -1,8 +1,57 @@
 # SnapLikeCollectionView
 
-<img src="demo.gif" width=200>
+## About
+
+The collectionView library which is scaling, scrolling and stopping comfortably like Snapchat and Instagram.
+
+|This|Instagram|Snapchat|
+|:-:|:-:|:-:|
+|<img src="demo.gif" width=200>|||
+
+## Requirements
+Swift 4.2. Ready for use on iOS 11.0+
+
+## Installation
+
+### via Cocoapods
+
+```ruby
+pod 'SnapLikeCollectionView'
+```
 
 ## Usage
+
+### Cell
+
+You should use **SnapLikeCell** protocol.
+
+**Item** is associatedtype. You can apply any model you want.
+
+This **Item** becomes dataSource's items.
+
+```swift
+public protocol SnapLikeCell: class {
+    associatedtype Item
+    var item: Item? { get set }
+}
+```
+
+Below is example.
+
+```swift
+import UIKit
+import SnapLikeCollectionView
+
+class SampleCell: UICollectionViewCell, SnapLikeCell {
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    var item: String? {
+        didSet {
+            titleLabel.text = item
+        }
+    }
+}
+```
 
 ### ViewController
 
@@ -44,47 +93,6 @@ extension ViewController: SnapLikeDataDelegate {
         }
     }
 }
-```
-
-### Cell
-
-You should use **SnapLikeCell** protocol.
-
-**Item** is associatedtype. You can apply any model you want.
-
-This **Item** becomes dataSource's items.
-
-```swift
-public protocol SnapLikeCell: class {
-    associatedtype Item
-    var item: Item? { get set }
-}
-```
-
-Below is example.
-
-```swift
-import UIKit
-import SnapLikeCollectionView
-
-class SampleCell: UICollectionViewCell, SnapLikeCell {
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    var item: String? {
-        didSet {
-            titleLabel.text = item
-        }
-    }
-}
-```
-
-## Requirements
-- Swift 4.2
-
-## Installation
-
-```ruby
-pod 'SnapLikeCollectionView'
 ```
 
 ## Author
