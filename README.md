@@ -50,7 +50,7 @@ extension ViewController: SnapLikeDataDelegate {
 ## Installation
 
 ```ruby
-pod "SnapLikeCollectionView"
+pod 'SnapLikeCollectionView'
 ```
 
 ## Author
