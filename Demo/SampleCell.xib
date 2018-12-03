@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SampleCell" id="TQf-Qh-65k" customClass="SampleCell" customModule="Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="194" height="189"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="194" height="189"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76s-Gc-XQb">
+                        <rect key="frame" x="8" y="8" width="178" height="173"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSU-0e-ej2">
+                                <rect key="frame" x="62.5" y="73" width="53" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OSU-0e-ej2" firstAttribute="centerX" secondItem="76s-Gc-XQb" secondAttribute="centerX" id="7ic-TP-haK"/>
+                            <constraint firstItem="OSU-0e-ej2" firstAttribute="centerY" secondItem="76s-Gc-XQb" secondAttribute="centerY" id="afG-eC-EUU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="76s-Gc-XQb" firstAttribute="top" secondItem="TQf-Qh-65k" secondAttribute="top" constant="8" id="5s2-yb-s4r"/>
+                <constraint firstItem="76s-Gc-XQb" firstAttribute="leading" secondItem="TQf-Qh-65k" secondAttribute="leading" constant="8" id="EMp-g6-zaR"/>
+                <constraint firstAttribute="trailing" secondItem="76s-Gc-XQb" secondAttribute="trailing" constant="8" id="par-O1-wAh"/>
+                <constraint firstAttribute="bottom" secondItem="76s-Gc-XQb" secondAttribute="bottom" constant="8" id="vLZ-Yr-E6S"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vFC-og-8yu"/>
+            <size key="customSize" width="194" height="189"/>
+            <connections>
+                <outlet property="titleLabel" destination="OSU-0e-ej2" id="ut2-Ag-MDQ"/>
+            </connections>
+            <point key="canvasLocation" x="147.19999999999999" y="55.322338830584712"/>
+        </collectionViewCell>
+    </objects>
+</document>
