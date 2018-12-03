@@ -45,15 +45,13 @@ extension ViewController: SnapLikeDataDelegate {
 ```
 
 ## Requirements
-
 - Swift 4.2
 
 ## Installation
 
-
 ```ruby
 pod "SnapLikeCollectionView"
-```　
+```
 
 ## Author
 
