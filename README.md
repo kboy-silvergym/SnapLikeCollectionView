@@ -9,7 +9,7 @@ The collectionView library which is scaling, scrolling and stopping comfortably 
 
 This library is not perfect, so welcome to your PR 🤲🤲🤲
 
-|This|Instagram|Snapchat|
+|👻This👻|Instagram|Snapchat|
 |:-:|:-:|:-:|
 |<img src="Images/this.gif" width=200>|<img src="Images/instagram.gif" width=180>|<img src="Images/snapchat.gif" width=180>|
 
