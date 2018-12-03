@@ -111,7 +111,7 @@ extension ViewController: SnapLikeDataDelegate {
 
 Check how to use from [Demo](https://github.com/kboy-silvergym/SnapLikeCollectionView/tree/master/Demo) 👍👍
 
-## Author
+## 👻Author 👻
 
 <img src ="https://avatars3.githubusercontent.com/u/17683316?s=460&v=4" width=150>
 
