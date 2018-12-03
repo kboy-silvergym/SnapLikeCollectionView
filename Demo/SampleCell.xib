@@ -22,14 +22,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76s-Gc-XQb">
                         <rect key="frame" x="8" y="8" width="178" height="173"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSU-0e-ej2">
-                                <rect key="frame" x="62.5" y="73" width="53" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSU-0e-ej2">
+                                <rect key="frame" x="81" y="73" width="16" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OSU-0e-ej2" firstAttribute="centerX" secondItem="76s-Gc-XQb" secondAttribute="centerX" id="7ic-TP-haK"/>
                             <constraint firstItem="OSU-0e-ej2" firstAttribute="centerY" secondItem="76s-Gc-XQb" secondAttribute="centerY" id="afG-eC-EUU"/>
@@ -46,9 +46,10 @@
             <viewLayoutGuide key="safeArea" id="vFC-og-8yu"/>
             <size key="customSize" width="194" height="189"/>
             <connections>
+                <outlet property="bgView" destination="76s-Gc-XQb" id="IYv-gn-kdJ"/>
                 <outlet property="titleLabel" destination="OSU-0e-ej2" id="ut2-Ag-MDQ"/>
             </connections>
-            <point key="canvasLocation" x="147.19999999999999" y="55.322338830584712"/>
+            <point key="canvasLocation" x="-112" y="41"/>
         </collectionViewCell>
     </objects>
 </document>

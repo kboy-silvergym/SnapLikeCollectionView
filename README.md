@@ -1,8 +1,13 @@
-# SnapLikeCollectionView
+# 👻 SnapLikeCollectionView 👻 
+
+![platform](https://img.shields.io/badge/platform-ios-blue.svg) ![ios](https://img.shields.io/badge/ios-11.0%2B-blue.svg) ![swift](https://img.shields.io/badge/swift-4.2-orange.svg) ![license](https://img.shields.io/badge/license-MIT-lightgrey.svg)
+<a href="https://twitter.com/kboy_silvergym">![tw](https://img.shields.io/badge/twitter-%40kboy__silvergym-blue.svg)</a>
 
 ## About
 
 The collectionView library which is scaling, scrolling and stopping comfortably like Snapchat and Instagram.
+
+This library is not perfect, so welcome to your PR 🤲🤲🤲
 
 |This|Instagram|Snapchat|
 |:-:|:-:|:-:|
@@ -94,6 +99,8 @@ extension ViewController: SnapLikeDataDelegate {
     }
 }
 ```
+
+Check how to use from [Demo](https://github.com/kboy-silvergym/SnapLikeCollectionView/tree/master/Demo) 👍👍
 
 ## Author
 

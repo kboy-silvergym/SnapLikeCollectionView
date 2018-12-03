@@ -10,6 +10,11 @@ import UIKit
 import SnapLikeCollectionView
 
 class SampleCell: UICollectionViewCell, SnapLikeCell {
+    @IBOutlet weak var bgView: UIView! {
+        didSet {
+            bgView.layer.cornerRadius = 32
+        }
+    }
     @IBOutlet weak var titleLabel: UILabel!
     
     var item: String? {
