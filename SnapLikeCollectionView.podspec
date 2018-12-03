@@ -13,4 +13,5 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "11.0"
   s.source       = { :git => "https://github.com/kboy-silvergym/SnapLikeCollectionView.git", :commit => "8cf54f1c76345950014137ff0d071fd916a4adcf" }
   s.source_files  = "SnapLikeCollectionView/**/*.swift"
+  s.swift_version = '4.2'
 end
