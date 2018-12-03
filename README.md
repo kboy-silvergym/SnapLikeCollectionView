@@ -4,6 +4,8 @@
 
 ## Usage
 
+### ViewController
+
 ```swift
 import UIKit
 import SnapLikeCollectionView
@@ -39,6 +41,38 @@ extension ViewController: SnapLikeDataDelegate {
         DispatchQueue.main.async { [weak self] in
             let selectedItem: String = self?.dataSource?.items[index] ?? ""
             self?.titleLabel.text = selectedItem
+        }
+    }
+}
+```
+
+### Cell
+
+You should use **SnapLikeCell** protocol.
+
+**Item** is associatedtype. You can apply any model you want.
+
+This **Item** becomes dataSource's items.
+
+```swift
+public protocol SnapLikeCell: class {
+    associatedtype Item
+    var item: Item? { get set }
+}
+```
+
+Below is example.
+
+```swift
+import UIKit
+import SnapLikeCollectionView
+
+class SampleCell: UICollectionViewCell, SnapLikeCell {
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    var item: String? {
+        didSet {
+            titleLabel.text = item
         }
     }
 }
