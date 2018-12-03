@@ -11,7 +11,7 @@ This library is not perfect, so welcome to your PR 🤲🤲🤲
 
 |This|Instagram|Snapchat|
 |:-:|:-:|:-:|
-|<img src="Images/demo.gif" width=200>|<img src="Images/instagram.gif" width=200>|<img src="Images/snapchat.gif" width=200>|
+|<img src="Images/this.gif" width=200>|<img src="Images/instagram.gif" width=200>|<img src="Images/snapchat.gif" width=200>|
 
 ## Requirements
 Swift 4.2. Ready for use on iOS 11.0+
