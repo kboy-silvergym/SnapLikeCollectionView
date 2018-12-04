@@ -7,8 +7,6 @@
 
 The collectionView library which is scaling, scrolling and stopping comfortably like Snapchat and Instagram.
 
-This library is not perfect, so welcome to your PR 🤲🤲🤲
-
 |👻 This 👻|Instagram|Snapchat|
 |:-:|:-:|:-:|
 |<img src="Images/this.gif" width=200>|<img src="Images/instagram.gif" width=180>|<img src="Images/snapchat.gif" width=180>|
@@ -110,6 +108,9 @@ extension ViewController: SnapLikeDataDelegate {
 ```
 
 Check how to use from [Demo](https://github.com/kboy-silvergym/SnapLikeCollectionView/tree/master/Demo) 👍👍
+
+## Welcome to your PR
+This library is not perfect, so welcome to your PR 🤲🤲🤲
 
 ## Author 👻
 
