@@ -12,19 +12,19 @@ import SnapLikeCollectionView
 class Demo1ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    private var dataSource: SnapLikeDataSource<SampleCell>?
+    private var dataSource: SnapLikeDataSource<Demo1Cell>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         let cellSize = SnapLikeCellSize(normal: 100, center: 160)
-        dataSource = SnapLikeDataSource<SampleCell>(collectionView: collectionView, cellSize: cellSize)
+        dataSource = SnapLikeDataSource<Demo1Cell>(collectionView: collectionView, cellSize: cellSize)
         dataSource?.delegate = self
         
         let layout = SnapLikeCollectionViewFlowLayout(cellSize: cellSize)
         collectionView.collectionViewLayout = layout
         
-        collectionView.registerNib(SampleCell.self)
+        collectionView.registerNib(Demo1Cell.self)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.decelerationRate = .fast
         collectionView.backgroundColor = .clear

@@ -1,5 +1,5 @@
 //
-//  SampleCell.swift
+//  Demo1Cell.swift
 //  Demo
 //
 //  Created by Kei Fujikawa on 2018/12/03.
@@ -9,7 +9,7 @@
 import UIKit
 import SnapLikeCollectionView
 
-class SampleCell: UICollectionViewCell, SnapLikeCell {
+class Demo1Cell: UICollectionViewCell, SnapLikeCell {
     @IBOutlet weak var bgView: UIView! {
         didSet {
             bgView.layer.cornerRadius = 32
