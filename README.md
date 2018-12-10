@@ -7,9 +7,20 @@
 
 The collectionView library which is scaling, scrolling and stopping comfortably like Snapchat and Instagram.
 
+### Demo1
+
+Comparison with Instagram and Snapchat.
+
 |👻 This 👻|Instagram|Snapchat|
 |:-:|:-:|:-:|
 |<img src="Images/this.gif" width=200>|<img src="Images/instagram.gif" width=180>|<img src="Images/snapchat.gif" width=180>|
+
+### Demo2
+
+You can change cell height since ver. 1.1.0
+
+<img src="Images/demo2.gif" width=200>
+
 
 ## Requirements
 Swift 4.2. Ready for use on iOS 11.0+

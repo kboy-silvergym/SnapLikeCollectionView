@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Demo2Cell" id="CNy-SK-5Zw" customClass="Demo2Cell" customModule="Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="224" height="361"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="224" height="361"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8Z-0o-0qw">
+                        <rect key="frame" x="8" y="8" width="208" height="345"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oHy-Bp-quq">
+                                <rect key="frame" x="67.5" y="132" width="73" height="81.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="68"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oHy-Bp-quq" firstAttribute="centerY" secondItem="D8Z-0o-0qw" secondAttribute="centerY" id="OMW-gK-wqs"/>
+                            <constraint firstItem="oHy-Bp-quq" firstAttribute="centerX" secondItem="D8Z-0o-0qw" secondAttribute="centerX" id="cz1-aj-HN1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="D8Z-0o-0qw" secondAttribute="bottom" constant="8" id="9zS-HG-QpI"/>
+                <constraint firstItem="D8Z-0o-0qw" firstAttribute="leading" secondItem="CNy-SK-5Zw" secondAttribute="leading" constant="8" id="Mna-Qr-a0I"/>
+                <constraint firstItem="D8Z-0o-0qw" firstAttribute="top" secondItem="CNy-SK-5Zw" secondAttribute="top" constant="8" id="Sfl-nu-TWS"/>
+                <constraint firstAttribute="trailing" secondItem="D8Z-0o-0qw" secondAttribute="trailing" constant="8" id="vAh-tf-ntT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="BbR-U1-Sva"/>
+            <size key="customSize" width="224" height="361"/>
+            <connections>
+                <outlet property="bgView" destination="D8Z-0o-0qw" id="Sju-eO-rfE"/>
+                <outlet property="titleLabel" destination="oHy-Bp-quq" id="bDN-5O-WOp"/>
+            </connections>
+            <point key="canvasLocation" x="153.59999999999999" y="51.724137931034484"/>
+        </collectionViewCell>
+    </objects>
+</document>

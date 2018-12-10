@@ -9,22 +9,22 @@
 import UIKit
 import SnapLikeCollectionView
 
-class ViewController: UIViewController {
+class Demo1ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    private var dataSource: SnapLikeDataSource<SampleCell>?
+    private var dataSource: SnapLikeDataSource<Demo1Cell>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        let cellSize = SnapLikeCellSize(normal: 100, center: 160)
-        dataSource = SnapLikeDataSource<SampleCell>(collectionView: collectionView, cellSize: cellSize)
+        let cellSize = SnapLikeCellSize(normalWidth: 100, centerWidth: 160)
+        dataSource = SnapLikeDataSource<Demo1Cell>(collectionView: collectionView, cellSize: cellSize)
         dataSource?.delegate = self
         
         let layout = SnapLikeCollectionViewFlowLayout(cellSize: cellSize)
         collectionView.collectionViewLayout = layout
         
-        collectionView.registerNib(SampleCell.self)
+        collectionView.registerNib(Demo1Cell.self)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.decelerationRate = .fast
         collectionView.backgroundColor = .clear
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: SnapLikeDataDelegate {
+extension Demo1ViewController: SnapLikeDataDelegate {
     func cellSelected(_ index: Int) {
         DispatchQueue.main.async { [weak self] in
             let selectedItem: String = self?.dataSource?.items[index] ?? ""
@@ -43,12 +43,3 @@ extension ViewController: SnapLikeDataDelegate {
         }
     }
 }
-
-extension UICollectionView {
-    func registerNib<T: UICollectionViewCell>(_ cellType: T.Type){
-        let nibName = String(describing: cellType)
-        let nib = UINib(nibName: nibName, bundle: nil)
-        register(nib, forCellWithReuseIdentifier: nibName)
-    }
-}
-
