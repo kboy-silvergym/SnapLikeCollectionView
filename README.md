@@ -84,7 +84,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // setup size of cells
-        let cellSize = SnapLikeCellSize(normal: 100, center: 160)
+        let cellSize = SnapLikeCellSize(normalWidth: 100, centerWidth: 160)
         
         // create dataSource
         dataSource = SnapLikeDataSource<SampleCell>(collectionView: collectionView, cellSize: cellSize)
