@@ -19,8 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Yf4-9s-aRm">
-                                <rect key="frame" x="0.0" y="80" width="375" height="527"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="83.5" width="375" height="500"/>
+                                <color key="backgroundColor" red="1" green="0.94901960780000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="hEg-So-LCZ"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iRR-rU-iIX">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -33,8 +36,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Yf4-9s-aRm" firstAttribute="leading" secondItem="rUw-fz-B99" secondAttribute="leading" id="HFR-xx-opg"/>
-                            <constraint firstItem="rUw-fz-B99" firstAttribute="bottom" secondItem="Yf4-9s-aRm" secondAttribute="bottom" constant="60" id="QTt-H5-Nlf"/>
-                            <constraint firstItem="Yf4-9s-aRm" firstAttribute="top" secondItem="rUw-fz-B99" secondAttribute="top" constant="60" id="geB-Jt-Ed3"/>
+                            <constraint firstItem="Yf4-9s-aRm" firstAttribute="centerY" secondItem="qYb-aB-mdA" secondAttribute="centerY" id="Uvv-WB-HLi"/>
                             <constraint firstItem="Yf4-9s-aRm" firstAttribute="trailing" secondItem="rUw-fz-B99" secondAttribute="trailing" id="jJo-kc-5ik"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rUw-fz-B99"/>

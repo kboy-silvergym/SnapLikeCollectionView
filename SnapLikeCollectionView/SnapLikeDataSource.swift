@@ -27,8 +27,7 @@ public class SnapLikeDataSource<Cell: UICollectionViewCell>: NSObject, UICollect
     
     private let selectionFB = UISelectionFeedbackGenerator()
     
-    // FIXME: 循環参照が懸念される
-    private let collectionView: UICollectionView
+    private weak var collectionView: UICollectionView?
     private var collectionViewCenter: CGFloat
     private let cellSize: SnapLikeCellSize
     
@@ -72,7 +71,7 @@ public class SnapLikeDataSource<Cell: UICollectionViewCell>: NSObject, UICollect
     
     /// Reload cell so it becomes selected or unselected
     public func reloadCell(at indexPath: IndexPath, withSelectedState selected: Bool) {
-        if let cell = collectionView.cellForItem(at: indexPath) {
+        if let cell = collectionView?.cellForItem(at: indexPath) {
             cell.isSelected = selected
         }
     }
@@ -105,20 +104,20 @@ public class SnapLikeDataSource<Cell: UICollectionViewCell>: NSObject, UICollect
             nearestItemIndex = rightCenterIndex
         }
         selectedItem = nearestItemIndex
-        return CGPoint(x: CGFloat(nearestItemIndex) * cellSize.normal, y: 0.0)
+        return CGPoint(x: CGFloat(nearestItemIndex) * cellSize.normalWidth, y: 0.0)
     }
     
     /// Getting the nearest cell attributes on the left
     func nearestLeftCenter(forCenterX centerX: CGFloat) -> (index: Int, value: CGFloat) {
-        let nearestLeftElementIndex: CGFloat = (centerX - collectionViewCenter - cellSize.center + cellSize.normal) / cellSize.normal
-        let minimumLeftDistance: CGFloat = centerX - nearestLeftElementIndex * cellSize.normal - collectionViewCenter - cellSize.center + cellSize.normal
+        let nearestLeftElementIndex: CGFloat = (centerX - collectionViewCenter - cellSize.centerWidth + cellSize.normalWidth) / cellSize.normalWidth
+        let minimumLeftDistance: CGFloat = centerX - nearestLeftElementIndex * cellSize.normalWidth - collectionViewCenter - cellSize.centerWidth + cellSize.normalWidth
         return (Int(nearestLeftElementIndex), minimumLeftDistance)
     }
     
     /// Getting the nearest cell attributes on the right
     func nearestRightCenter(forCenterX centerX: CGFloat) -> (index: Int, value: CGFloat) {
-        let nearestRightElementIndex: Int = Int(ceilf(Float((centerX - collectionViewCenter - cellSize.center + cellSize.normal) / cellSize.normal)))
-        let minimumRightDistance: CGFloat = CGFloat(nearestRightElementIndex) * cellSize.normal + collectionViewCenter - centerX - cellSize.center + cellSize.normal
+        let nearestRightElementIndex: Int = Int(ceilf(Float((centerX - collectionViewCenter - cellSize.centerWidth + cellSize.normalWidth) / cellSize.normalWidth)))
+        let minimumRightDistance: CGFloat = CGFloat(nearestRightElementIndex) * cellSize.normalWidth + collectionViewCenter - centerX - cellSize.centerWidth + cellSize.normalWidth
         return (nearestRightElementIndex, minimumRightDistance)
     }
     
@@ -131,7 +130,7 @@ public class SnapLikeDataSource<Cell: UICollectionViewCell>: NSObject, UICollect
         selectedItem = indexPath.item
         
         let layout = collectionView.collectionViewLayout as! SnapLikeCollectionViewFlowLayout
-        let x: CGFloat = CGFloat(selectedItem) * cellSize.normal
+        let x: CGFloat = CGFloat(selectedItem) * cellSize.normalWidth
         layout.ignoringBoundsChange = true
         collectionView.setContentOffset(CGPoint(x: x, y: 0), animated: true)
         layout.ignoringBoundsChange = false

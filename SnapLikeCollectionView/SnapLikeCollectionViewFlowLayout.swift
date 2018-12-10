@@ -13,7 +13,7 @@ public class SnapLikeCollectionViewFlowLayout: UICollectionViewFlowLayout {
     var ignoringBoundsChange: Bool = false
     
     private var centerOffset: CGFloat {
-        return (collectionView!.bounds.width - cellSize.center) / 2
+        return (collectionView!.bounds.width - cellSize.centerWidth) / 2
     }
     private var height: CGFloat {
         return collectionView!.bounds.height
@@ -23,7 +23,7 @@ public class SnapLikeCollectionViewFlowLayout: UICollectionViewFlowLayout {
     }
     
     /// Dragging offset (used to calculate which cell is selected)
-    private lazy var dragOffset: CGFloat = cellSize.normal
+    private lazy var dragOffset: CGFloat = cellSize.normalWidth
     private var cache = [UICollectionViewLayoutAttributes]()
     private let cellSize: SnapLikeCellSize
     
@@ -37,21 +37,21 @@ public class SnapLikeCollectionViewFlowLayout: UICollectionViewFlowLayout {
     }
     
     private func updateLayout(forBounds newBounds: CGRect) {
-        let deltaX: CGFloat = cellSize.center - cellSize.normal
-        let deltaY: CGFloat = cellSize.center - cellSize.normal
-        let leftSideInset: CGFloat = (newBounds.width - cellSize.center) / 2
+        let deltaX: CGFloat = cellSize.centerWidth - cellSize.normalWidth
+        let deltaY: CGFloat = cellSize.centerHeight - cellSize.normalHeight
+        let leftSideInset: CGFloat = (newBounds.width - cellSize.centerWidth) / 2
         
-        for attribute: UICollectionViewLayoutAttributes in cache {
-            let normalCellOffsetX: CGFloat = leftSideInset + CGFloat(attribute.indexPath.row) * cellSize.normal
-            let normalCellOffsetY: CGFloat = (newBounds.height - cellSize.normal) / 2
+        for attribute in cache {
+            let normalCellOffsetX: CGFloat = leftSideInset + CGFloat(attribute.indexPath.row) * cellSize.normalWidth
+            let normalCellOffsetY: CGFloat = (newBounds.height - cellSize.normalHeight) / 2
             
-            let distanceBetweenCellAndBoundCenters = normalCellOffsetX - newBounds.midX + cellSize.center / 2
+            let distanceBetweenCellAndBoundCenters = normalCellOffsetX - newBounds.midX + cellSize.centerWidth / 2
             
-            let normalizedCenterScale = distanceBetweenCellAndBoundCenters / cellSize.normal
+            let normalizedCenterScale = distanceBetweenCellAndBoundCenters / cellSize.normalWidth
             
             let isCenterCell: Bool = fabsf(Float(normalizedCenterScale)) < 1.0
-            let isNormalCellOnRightOfCenter: Bool = (normalizedCenterScale > 0.0) && !isCenterCell
-            let isNormalCellOnLeftOfCenter: Bool = (normalizedCenterScale < 0.0) && !isCenterCell
+            let isNormalCellOnRightOfCenter: Bool = normalizedCenterScale > 0.0 && !isCenterCell
+            let isNormalCellOnLeftOfCenter: Bool = normalizedCenterScale < 0.0 && !isCenterCell
             
             if isCenterCell {
                 let incrementX: CGFloat = (1.0 - CGFloat(abs(Float(normalizedCenterScale)))) * deltaX
@@ -60,11 +60,26 @@ public class SnapLikeCollectionViewFlowLayout: UICollectionViewFlowLayout {
                 let offsetX: CGFloat = normalizedCenterScale > 0 ? deltaX - incrementX : 0
                 let offsetY: CGFloat = -incrementY / 2
                 
-                attribute.frame = CGRect(x: normalCellOffsetX + offsetX, y: normalCellOffsetY + offsetY, width: cellSize.normal + incrementX, height: cellSize.normal + incrementY)
+                attribute.frame = CGRect(
+                    x: normalCellOffsetX + offsetX,
+                    y: normalCellOffsetY + offsetY,
+                    width: cellSize.normalWidth + incrementX,
+                    height: cellSize.normalHeight + incrementY
+                )
             } else if isNormalCellOnRightOfCenter {
-                attribute.frame = CGRect(x: normalCellOffsetX + deltaX, y: normalCellOffsetY, width: cellSize.normal, height: cellSize.normal)
+                attribute.frame = CGRect(
+                    x: normalCellOffsetX + deltaX,
+                    y: normalCellOffsetY,
+                    width: cellSize.normalWidth,
+                    height: cellSize.normalHeight
+                )
             } else if isNormalCellOnLeftOfCenter {
-                attribute.frame = CGRect(x: normalCellOffsetX, y: normalCellOffsetY, width: cellSize.normal, height: cellSize.normal)
+                attribute.frame = CGRect(
+                    x: normalCellOffsetX,
+                    y: normalCellOffsetY,
+                    width: cellSize.normalWidth,
+                    height: cellSize.normalHeight
+                )
             }
         }
         
@@ -76,7 +91,7 @@ extension SnapLikeCollectionViewFlowLayout {
     
     /// Return the size of all the content in the collection view
     override public var collectionViewContentSize: CGSize {
-        let contentWidth: CGFloat = 2 * centerOffset + cellSize.center + CGFloat(numberOfItems - 1) * cellSize.normal
+        let contentWidth: CGFloat = 2 * centerOffset + cellSize.centerWidth + CGFloat(numberOfItems - 1) * cellSize.normalWidth
         return CGSize(width: contentWidth, height: height)
     }
     

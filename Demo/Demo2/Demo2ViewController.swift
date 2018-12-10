@@ -17,8 +17,14 @@ class Demo2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let screenWidth = UIScreen.main.bounds.width - 48
-        let cellSize = SnapLikeCellSize(normal: screenWidth, center: screenWidth)
+        let screenWidth: CGFloat = UIScreen.main.bounds.width
+        let collectionViewHeiht: CGFloat = collectionView.frame.height
+        let cellSize = SnapLikeCellSize(
+            normalWidth: screenWidth / 3,
+            centerWidth: screenWidth * 2 / 3,
+            normalHeight: collectionViewHeiht / 3,
+            centerHeight: collectionViewHeiht * 2 / 3
+        )
         dataSource = SnapLikeDataSource<Demo2Cell>(collectionView: collectionView, cellSize: cellSize)
         dataSource?.delegate = self
         
@@ -28,7 +34,6 @@ class Demo2ViewController: UIViewController {
         collectionView.registerNib(Demo2Cell.self)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.decelerationRate = .fast
-        collectionView.backgroundColor = .clear
         collectionView.delegate = dataSource
         collectionView.dataSource = dataSource
         

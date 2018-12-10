@@ -9,11 +9,18 @@
 import UIKit
 
 public struct SnapLikeCellSize {
-    let normal: CGFloat
-    let center: CGFloat
+    let normalWidth: CGFloat
+    let centerWidth: CGFloat
+    let normalHeight: CGFloat
+    let centerHeight: CGFloat
     
-    public init(normal: CGFloat, center: CGFloat) {
-        self.normal = normal
-        self.center = center
+    public init(normalWidth: CGFloat,
+                centerWidth: CGFloat,
+                normalHeight: CGFloat? = nil,
+                centerHeight: CGFloat? = nil) {
+        self.normalWidth = normalWidth
+        self.centerWidth = centerWidth
+        self.normalHeight = normalHeight ?? normalWidth
+        self.centerHeight = centerHeight ?? centerWidth
     }
 }

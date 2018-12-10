@@ -17,7 +17,7 @@ class Demo1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        let cellSize = SnapLikeCellSize(normal: 100, center: 160)
+        let cellSize = SnapLikeCellSize(normalWidth: 100, centerWidth: 160)
         dataSource = SnapLikeDataSource<Demo1Cell>(collectionView: collectionView, cellSize: cellSize)
         dataSource?.delegate = self
         
