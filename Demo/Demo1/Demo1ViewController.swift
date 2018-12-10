@@ -43,12 +43,3 @@ extension Demo1ViewController: SnapLikeDataDelegate {
         }
     }
 }
-
-extension UICollectionView {
-    func registerNib<T: UICollectionViewCell>(_ cellType: T.Type){
-        let nibName = String(describing: cellType)
-        let nib = UINib(nibName: nibName, bundle: nil)
-        register(nib, forCellWithReuseIdentifier: nibName)
-    }
-}
-

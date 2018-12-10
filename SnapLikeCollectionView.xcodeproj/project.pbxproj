@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		2898EA9E21BE454F0068ABAC /* Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2898EA9D21BE454F0068ABAC /* Menu.storyboard */; };
 		2898EAA021BE45640068ABAC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898EA9F21BE45640068ABAC /* MenuViewController.swift */; };
+		2898EAA421BE485A0068ABAC /* Demo2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2898EAA321BE485A0068ABAC /* Demo2.storyboard */; };
+		2898EAA621BE48650068ABAC /* Demo2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898EAA521BE48650068ABAC /* Demo2ViewController.swift */; };
+		2898EAA921BE48C00068ABAC /* Demo2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898EAA721BE48C00068ABAC /* Demo2Cell.swift */; };
+		2898EAAA21BE48C00068ABAC /* Demo2Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2898EAA821BE48C00068ABAC /* Demo2Cell.xib */; };
+		2898EAAD21BE48E80068ABAC /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898EAAC21BE48E80068ABAC /* UICollectionView+Extensions.swift */; };
 		28D9CD8821B4F31A0008C3C4 /* SnapLikeCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 28D9CD8621B4F31A0008C3C4 /* SnapLikeCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		28D9CD9221B4F37F0008C3C4 /* SnapLikeCellSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9CD8E21B4F37F0008C3C4 /* SnapLikeCellSize.swift */; };
 		28D9CD9321B4F37F0008C3C4 /* SnapLikeCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D9CD8F21B4F37F0008C3C4 /* SnapLikeCollectionViewFlowLayout.swift */; };
@@ -26,6 +31,11 @@
 /* Begin PBXFileReference section */
 		2898EA9D21BE454F0068ABAC /* Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Menu.storyboard; sourceTree = "<group>"; };
 		2898EA9F21BE45640068ABAC /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2898EAA321BE485A0068ABAC /* Demo2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Demo2.storyboard; sourceTree = "<group>"; };
+		2898EAA521BE48650068ABAC /* Demo2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo2ViewController.swift; sourceTree = "<group>"; };
+		2898EAA721BE48C00068ABAC /* Demo2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Demo2Cell.swift; sourceTree = "<group>"; };
+		2898EAA821BE48C00068ABAC /* Demo2Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Demo2Cell.xib; sourceTree = "<group>"; };
+		2898EAAC21BE48E80068ABAC /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		28D9CD8321B4F31A0008C3C4 /* SnapLikeCollectionView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapLikeCollectionView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D9CD8621B4F31A0008C3C4 /* SnapLikeCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnapLikeCollectionView.h; sourceTree = "<group>"; };
 		28D9CD8721B4F31A0008C3C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +83,25 @@
 			path = Demo1;
 			sourceTree = "<group>";
 		};
+		2898EAA221BE48460068ABAC /* Demo2 */ = {
+			isa = PBXGroup;
+			children = (
+				2898EAA321BE485A0068ABAC /* Demo2.storyboard */,
+				2898EAA521BE48650068ABAC /* Demo2ViewController.swift */,
+				2898EAA721BE48C00068ABAC /* Demo2Cell.swift */,
+				2898EAA821BE48C00068ABAC /* Demo2Cell.xib */,
+			);
+			path = Demo2;
+			sourceTree = "<group>";
+		};
+		2898EAAB21BE48D00068ABAC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2898EAAC21BE48E80068ABAC /* UICollectionView+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		28D9CD7921B4F31A0008C3C4 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +140,8 @@
 				2898EA9D21BE454F0068ABAC /* Menu.storyboard */,
 				2898EA9F21BE45640068ABAC /* MenuViewController.swift */,
 				2898EAA121BE46530068ABAC /* Demo1 */,
+				2898EAA221BE48460068ABAC /* Demo2 */,
+				2898EAAB21BE48D00068ABAC /* Utils */,
 				28D9CDA321B4F4110008C3C4 /* Assets.xcassets */,
 				28D9CDA521B4F4110008C3C4 /* LaunchScreen.storyboard */,
 				28D9CDA821B4F4110008C3C4 /* Info.plist */,
@@ -217,11 +248,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2898EAA421BE485A0068ABAC /* Demo2.storyboard in Resources */,
 				2898EA9E21BE454F0068ABAC /* Menu.storyboard in Resources */,
 				28D9CDA721B4F4110008C3C4 /* LaunchScreen.storyboard in Resources */,
 				28D9CDAF21B4F4C10008C3C4 /* Demo1Cell.xib in Resources */,
 				28D9CDA421B4F4110008C3C4 /* Assets.xcassets in Resources */,
 				28D9CDA221B4F40F0008C3C4 /* Demo1.storyboard in Resources */,
+				2898EAAA21BE48C00068ABAC /* Demo2Cell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,8 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2898EAAD21BE48E80068ABAC /* UICollectionView+Extensions.swift in Sources */,
+				2898EAA621BE48650068ABAC /* Demo2ViewController.swift in Sources */,
 				28D9CD9F21B4F40F0008C3C4 /* Demo1ViewController.swift in Sources */,
 				28D9CD9D21B4F40F0008C3C4 /* AppDelegate.swift in Sources */,
+				2898EAA921BE48C00068ABAC /* Demo2Cell.swift in Sources */,
 				28D9CDAD21B4F4B40008C3C4 /* Demo1Cell.swift in Sources */,
 				2898EAA021BE45640068ABAC /* MenuViewController.swift in Sources */,
 			);

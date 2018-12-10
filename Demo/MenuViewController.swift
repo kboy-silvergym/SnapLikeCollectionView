@@ -24,7 +24,7 @@ class MenuViewController: UITableViewController {
     }
     
     private func goDemo2(){
-        let sb = UIStoryboard(name: "Demo1", bundle: nil)
+        let sb = UIStoryboard(name: "Demo2", bundle: nil)
         let vc = sb.instantiateInitialViewController()!
         present(vc, animated: true, completion: nil)
     }
