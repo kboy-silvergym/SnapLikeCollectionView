@@ -9,7 +9,7 @@
 import UIKit
 import SnapLikeCollectionView
 
-class ViewController: UIViewController {
+class Demo1ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     private var dataSource: SnapLikeDataSource<SampleCell>?
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: SnapLikeDataDelegate {
+extension Demo1ViewController: SnapLikeDataDelegate {
     func cellSelected(_ index: Int) {
         DispatchQueue.main.async { [weak self] in
             let selectedItem: String = self?.dataSource?.items[index] ?? ""
