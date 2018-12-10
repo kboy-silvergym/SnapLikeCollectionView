@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SnapLikeCollectionView"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "Scaling and Good Scrolling CollectionView like Snapchat's that."
   s.description  = <<-DESC
                      - Scaling and Good Scrolling CollectionView like Snapchat's that.
