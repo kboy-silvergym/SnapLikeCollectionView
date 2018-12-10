@@ -98,7 +98,6 @@ class ViewController: UIViewController {
         collectionView.registerNib(SampleCell.self)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.decelerationRate = .fast
-        collectionView.backgroundColor = .clear
         collectionView.delegate = dataSource
         collectionView.dataSource = dataSource
         
