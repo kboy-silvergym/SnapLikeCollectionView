@@ -128,7 +128,7 @@ This library is not perfect, so welcome to your PR 🤲🤲🤲
 
 **KBOY (Kei Fujikawa)**
 
-iOS Developer in Tokyo Japan, working on AR startup named [Graffity Inc.](https://www.graffity.jp/)
+iOS Developer in Tokyo Japan.
 
 - [Twitter](https://twitter.com/kboy_silvergym) / [Facebook](https://www.facebook.com/kei.fujikawa1)
 - [LinkedIn](https://www.linkedin.com/in/kei-fujikawa) / [Wantedly](https://www.wantedly.com/users/17820205)
